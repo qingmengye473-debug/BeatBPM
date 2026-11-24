@@ -118,7 +118,7 @@ fun BeatBpmScreen() {
     val bg = Color(0xFF101820)
     val panel = Color(0xFF1D2A35)
     val mint = Color(0xFF63E6B0)
-    val tapModifier = Modifier.fillMaxWidth().weight(1f).pointerInput(isTesting, expectedStartNs, intervalNs, taps, tolerance) {
+    val tapModifier = Modifier.fillMaxWidth().pointerInput(isTesting, expectedStartNs, intervalNs, taps, tolerance) {
         detectTapGestures {
             if (isTesting && countdown == 0 && taps.size < 16 && expectedStartNs > 0L) {
                 val now = System.nanoTime()
